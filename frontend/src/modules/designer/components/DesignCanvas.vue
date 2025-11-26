@@ -41,6 +41,8 @@ const canvasRef = ref<HTMLElement | null>(null);
 
 const localComponents = computed({
   get: () => store.components,
+  // Setter intentionally does nothing - updates are handled by onComponentsChange event
+  // when Vue.Draggable modifies the list through drag operations
   set: (_value) => {
     // Update will be handled by onComponentsChange
   }
